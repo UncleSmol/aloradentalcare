@@ -29,10 +29,6 @@ export default function BookingSection() {
       <div className="section-container">
         <div className="booking-card-wrapper">
           <div className="booking-info-col">
-            <div className="section-subtitle-badge">
-              <Calendar size={14} />
-              <span>BOOK AN APPOINTMENT</span>
-            </div>
             <h2 className="booking-title">
               Ready For Your <br />
               <span className="gold-text-accent">New Smile?</span>

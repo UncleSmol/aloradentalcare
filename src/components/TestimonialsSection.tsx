@@ -28,10 +28,6 @@ export default function TestimonialsSection() {
     <section className="section-padding testimonials-section">
       <div className="section-container">
         <div className="section-header">
-          <div className="section-subtitle-badge">
-            <Sparkles size={14} />
-            <span>PATIENT STORIES</span>
-          </div>
           <h2 className="section-title">
             Loved By Families Across <br />
             <span className="gold-text-accent">eMalahleni</span>

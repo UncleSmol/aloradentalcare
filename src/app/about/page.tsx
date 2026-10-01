@@ -24,12 +24,8 @@ export default function AboutPage() {
       {/* Page Header */}
       <section className="page-header-banner">
         <div className="section-container">
-          <div className="section-subtitle-badge">
-            <Sparkles size={14} />
-            <span>OUR PRACTICE & PHILOSOPHY</span>
-          </div>
           <h1 className="page-title">
-            Gentle Family & Cosmetic Dentistry <br />
+            Gentle Family & Aesthetic Dentistry <br />
             <span className="gold-text-accent">In eMalahleni</span>
           </h1>
           <p className="page-subtitle">
@@ -45,10 +41,6 @@ export default function AboutPage() {
       <section className="section-padding founder-section">
         <div className="section-container founder-grid">
           <div className="founder-info-card">
-            <div className="section-subtitle-badge">
-              <Award size={14} />
-              <span>DEDICATED DENTAL TEAM</span>
-            </div>
             <h2>Meet Dr. Alora Vance & Team</h2>
             <p className="founder-lead">
               "Our goal is to make every dental visit comfortable, transparent, and completely stress-free for your entire family."
@@ -79,10 +71,6 @@ export default function AboutPage() {
       <section className="section-padding tech-stack-section">
         <div className="section-container">
           <div className="section-header">
-            <div className="section-subtitle-badge">
-              <Stethoscope size={14} />
-              <span>OUR CARE STANDARDS</span>
-            </div>
             <h2 className="section-title">
               What Sets Alora Dental <br />
               <span className="gold-text-accent">Care Apart</span>
@@ -121,10 +109,6 @@ export default function AboutPage() {
       <section className="section-padding comfort-menu-section">
         <div className="section-container">
           <div className="section-header">
-            <div className="section-subtitle-badge">
-              <MapPin size={14} />
-              <span>PRACTICE LOCATION</span>
-            </div>
             <h2 className="section-title">
               Conveniently Located In <br />
               <span className="gold-text-accent">Reyno Ridge Centre</span>

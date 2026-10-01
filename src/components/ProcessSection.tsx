@@ -38,10 +38,6 @@ export default function ProcessSection() {
     <section className="section-padding process-section">
       <div className="section-container">
         <div className="section-header">
-          <div className="section-subtitle-badge">
-            <Sparkles size={14} />
-            <span>HOW IT WORKS</span>
-          </div>
           <h2 className="section-title">
             Your Seamless Journey To A <br />
             <span className="gold-text-accent">Healthy, Radiant Smile</span>

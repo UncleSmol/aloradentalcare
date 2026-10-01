@@ -40,10 +40,6 @@ export default function BookingPage() {
       {/* Page Header */}
       <section className="page-header-banner">
         <div className="section-container">
-          <div className="section-subtitle-badge">
-            <Calendar size={14} />
-            <span>APPOINTMENT & CONTACT PORTAL</span>
-          </div>
           <h1 className="page-title">
             Book Your Visit at <br />
             <span className="gold-text-accent">Alora Dental Care</span>
@@ -264,10 +260,6 @@ export default function BookingPage() {
       <section className="section-padding map-section-container">
         <div className="section-container">
           <div className="section-header">
-            <div className="section-subtitle-badge">
-              <MapPin size={14} />
-              <span>FIND US IN REYNO RIDGE</span>
-            </div>
             <h2 className="section-title">
               Visit Our Practice in <br />
               <span className="gold-text-accent">eMalahleni</span>

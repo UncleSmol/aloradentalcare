@@ -89,10 +89,6 @@ export default function ReviewsPage() {
       {/* Page Header */}
       <section className="page-header-banner">
         <div className="section-container">
-          <div className="section-subtitle-badge">
-            <Star size={14} className="star-gold" />
-            <span>PATIENT TESTIMONIALS</span>
-          </div>
           <h1 className="page-title">
             Loved By Families Across <br />
             <span className="gold-text-accent">eMalahleni</span>
@@ -145,10 +141,6 @@ export default function ReviewsPage() {
       <section className="section-padding all-reviews-section">
         <div className="section-container">
           <div className="section-header">
-            <div className="section-subtitle-badge">
-              <Quote size={14} />
-              <span>VERIFIED REVIEWS</span>
-            </div>
             <h2 className="section-title">
               What Our Patients Say <br />
               <span className="gold-text-accent">About Their Visit</span>
@@ -184,10 +176,6 @@ export default function ReviewsPage() {
       <section className="section-padding review-form-section">
         <div className="section-container review-form-card">
           <div className="form-intro">
-            <div className="section-subtitle-badge">
-              <MessageSquare size={14} />
-              <span>SHARE YOUR STORY</span>
-            </div>
             <h2>Have You Visited Alora Dental Care?</h2>
             <p>We value your feedback and love hearing how your visit has improved your smile and health.</p>
           </div>

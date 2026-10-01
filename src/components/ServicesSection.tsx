@@ -62,10 +62,6 @@ export default function ServicesSection({ onSelectService }: ServicesSectionProp
     <section className="section-padding services-section">
       <div className="section-container">
         <div className="section-header">
-          <div className="section-subtitle-badge">
-            <Sparkles size={14} />
-            <span>OUR TREATMENT SOLUTIONS</span>
-          </div>
           <h2 className="section-title">
             Tailored Dental Care <br />
             <span className="gold-text-accent">For The Whole Family</span>

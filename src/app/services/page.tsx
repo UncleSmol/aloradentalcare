@@ -142,10 +142,6 @@ export default function ServicesPage() {
       {/* Page Header */}
       <section className="page-header-banner">
         <div className="section-container">
-          <div className="section-subtitle-badge">
-            <Layers size={14} />
-            <span>OUR DENTAL SERVICES</span>
-          </div>
           <h1 className="page-title">
             Comprehensive Family & Cosmetic Dentistry <br />
             <span className="gold-text-accent">In eMalahleni</span>
@@ -254,10 +250,6 @@ export default function ServicesPage() {
       <section className="section-padding insurance-banner-section">
         <div className="section-container insurance-card">
           <div className="insurance-info">
-            <div className="section-subtitle-badge">
-              <CreditCard size={14} />
-              <span>MEDICAL AID & PAYMENTS</span>
-            </div>
             <h2>Direct Medical Aid Billing & Flexible Options</h2>
             <p>
               At Alora Dental Care in Reyno Ridge, eMalahleni, we submit claims directly to Discovery Health, Bonitas, Momentum, Medshield, Bestmed, Fedhealth, and all major South African medical schemes. We also accept debit cards, credit cards, and EFT payments.

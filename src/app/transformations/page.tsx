@@ -49,10 +49,6 @@ export default function TransformationsPage() {
       {/* Page Header */}
       <section className="page-header-banner">
         <div className="section-container">
-          <div className="section-subtitle-badge">
-            <Sparkles size={14} />
-            <span>SMILE GALLERY & CASE STUDIES</span>
-          </div>
           <h1 className="page-title">
             Witness Real Patient <br />
             <span className="gold-text-accent">Smile Transformations</span>
@@ -70,10 +66,6 @@ export default function TransformationsPage() {
       <section className="section-padding case-studies-section">
         <div className="section-container">
           <div className="section-header">
-            <div className="section-subtitle-badge">
-              <Award size={14} />
-              <span>REAL PATIENT STORIES</span>
-            </div>
             <h2 className="section-title">
               Featured Smile Makeover <br />
               <span className="gold-text-accent">Case Studies</span>
@@ -119,10 +111,6 @@ export default function TransformationsPage() {
       <section className="section-padding comparison-section">
         <div className="section-container">
           <div className="section-header">
-            <div className="section-subtitle-badge">
-              <Smile size={14} />
-              <span>CHOOSING YOUR TREATMENT</span>
-            </div>
             <h2 className="section-title">
               Which Transformation is <br />
               <span className="gold-text-accent">Right For You?</span>

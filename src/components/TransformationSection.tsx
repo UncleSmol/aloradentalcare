@@ -1,7 +1,8 @@
 "use client";
 
 import { useState, useRef, MouseEvent, TouchEvent } from "react";
-import { Sparkles, CheckCircle2, ShieldCheck } from "lucide-react";
+import Image from "next/image";
+import { CheckCircle2, ShieldCheck, Sparkles } from "lucide-react";
 
 export default function TransformationSection() {
   const [sliderPosition, setSliderPosition] = useState(50);
@@ -12,8 +13,8 @@ export default function TransformationSection() {
     const rect = containerRef.current.getBoundingClientRect();
     const x = clientX - rect.left;
     let position = (x / rect.width) * 100;
-    if (position < 0) position = 0;
-    if (position > 100) position = 100;
+    if (position < 2) position = 2;
+    if (position > 98) position = 98;
     setSliderPosition(position);
   };
 
@@ -24,16 +25,12 @@ export default function TransformationSection() {
     <section className="section-padding transformation-section">
       <div className="section-container">
         <div className="section-header">
-          <div className="section-subtitle-badge">
-            <Sparkles size={14} />
-            <span>REAL PATIENT RESULTS</span>
-          </div>
           <h2 className="section-title">
             Witness the Power of a <br />
             <span className="gold-text-accent">Radiant Smile Transformation</span>
           </h2>
           <p className="section-description">
-            Drag the interactive slider below to explore the dramatic difference custom porcelain veneers and clear orthodontic alignment can make.
+            Drag the interactive divider below to explore real patient smile results achieved with custom porcelain veneers and teeth whitening.
           </p>
         </div>
 
@@ -44,42 +41,42 @@ export default function TransformationSection() {
             onMouseMove={handleMouseMove}
             onTouchMove={handleTouchMove}
           >
-            {/* AFTER Layer (Full Width) */}
+            {/* AFTER Layer (Full Background Image) */}
             <div className="after-layer">
-              <div className="smile-demo-after">
-                <div className="smile-graphic-after">
-                  <div className="smile-label-badge after-label">AFTER ALORA CARE</div>
-                  <div className="teeth-row">
-                    {[1, 2, 3, 4, 5, 6].map((i) => (
-                      <div key={i} className="tooth-item after-tooth" />
-                    ))}
-                  </div>
-                </div>
-              </div>
+              <Image
+                src="/hero-gallery-2.jpg"
+                alt="After Dental Smile Transformation"
+                fill
+                sizes="(max-width: 1200px) 100vw, 1000px"
+                unoptimized
+                style={{ objectFit: "cover" }}
+              />
+              <div className="smile-label-badge after-label">AFTER ALORA DENTAL CARE</div>
             </div>
 
-            {/* BEFORE Layer (Clipped Width) */}
+            {/* BEFORE Layer (Clipped Overlay Image) */}
             <div
               className="before-layer"
-              style={{ width: `${sliderPosition}%`, overflow: "hidden" }}
+              style={{ width: `${sliderPosition}%` }}
             >
-              <div className="smile-demo-before" style={{ width: containerRef.current?.clientWidth || "100%" }}>
-                <div className="smile-graphic-before">
-                  <div className="smile-label-badge before-label">BEFORE TREATMENT</div>
-                  <div className="teeth-row">
-                    {[1, 2, 3, 4, 5, 6].map((i) => (
-                      <div key={i} className="tooth-item before-tooth" />
-                    ))}
-                  </div>
-                </div>
+              <div className="before-image-inner" style={{ width: containerRef.current?.clientWidth || "100%" }}>
+                <Image
+                  src="/hero-gallery-4.jpg"
+                  alt="Before Dental Smile Treatment"
+                  fill
+                  sizes="(max-width: 1200px) 100vw, 1000px"
+                  unoptimized
+                  style={{ objectFit: "cover", filter: "contrast(0.9) brightness(0.9)" }}
+                />
+                <div className="smile-label-badge before-label">BEFORE TREATMENT</div>
               </div>
             </div>
 
-            {/* Slider Handle Divider */}
+            {/* Interactive Drag Handle */}
             <div className="slider-handle" style={{ left: `${sliderPosition}%` }}>
               <div className="slider-handle-line" />
               <div className="slider-handle-button">
-                &harr;
+                <span>&larr; &rarr;</span>
               </div>
             </div>
           </div>
@@ -87,7 +84,7 @@ export default function TransformationSection() {
           <div className="transformation-facts">
             <div className="fact-pill">
               <CheckCircle2 size={16} className="fact-icon" />
-              <span>Painless 1-Visit Procedure</span>
+              <span>Pain-Free Procedures</span>
             </div>
             <div className="fact-pill">
               <ShieldCheck size={16} className="fact-icon" />

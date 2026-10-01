@@ -20,10 +20,6 @@ export default function ProcessPage() {
       {/* Page Header */}
       <section className="page-header-banner">
         <div className="section-container">
-          <div className="section-subtitle-badge">
-            <Sparkles size={14} />
-            <span>PATIENT EXPERIENCE & TIMELINE</span>
-          </div>
           <h1 className="page-title">
             Your Gentle & Painless <br />
             <span className="gold-text-accent">4-Step Dental Journey</span>
@@ -41,10 +37,6 @@ export default function ProcessPage() {
       <section className="section-padding process-breakdown-section">
         <div className="section-container">
           <div className="section-header">
-            <div className="section-subtitle-badge">
-              <Clock size={14} />
-              <span>WHAT TO EXPECT</span>
-            </div>
             <h2 className="section-title">
               Every Step Tailored To <br />
               <span className="gold-text-accent">Your Comfort & Peace of Mind</span>
@@ -105,10 +97,6 @@ export default function ProcessPage() {
               />
             </div>
             <div className="about-features-col">
-              <div className="section-subtitle-badge">
-                <HeartPulse size={14} />
-                <span>PATIENT COMFORT</span>
-              </div>
               <h2 className="section-title" style={{ textAlign: "left" }}>
                 Designed For A <br />
                 <span className="gold-text-accent">Zero-Anxiety Experience</span>

@@ -8,10 +8,6 @@ export default function AboutSection() {
     <section className="section-padding about-section">
       <div className="section-container">
         <div className="section-header">
-          <div className="section-subtitle-badge">
-            <Sparkles size={14} />
-            <span>WHO WE ARE</span>
-          </div>
           <h2 className="section-title">
             Gentle Dentistry Designed Around <br />
             <span className="gold-text-accent">Your Comfort & Oral Health</span>
