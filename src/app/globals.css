@@ -547,6 +547,26 @@ body {
   background: linear-gradient(180deg, rgba(7, 14, 28, 0.15) 0%, rgba(7, 14, 28, 0.4) 100%);
 }
 
+/* Parallax Hand Image (Bottom-Right Overlap) */
+.hero-hand-wrapper {
+  position: absolute;
+  bottom: -45px;
+  right: -25px;
+  z-index: 4;
+  pointer-events: none;
+  width: clamp(300px, 42vw, 680px);
+  max-width: 700px;
+  user-select: none;
+}
+
+.hero-hand-img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  filter: drop-shadow(0 15px 35px rgba(0, 0, 0, 0.45));
+}
+
 /* Hero Media Gallery Controls & Badge */
 .hero-gallery-badge {
   position: absolute;
