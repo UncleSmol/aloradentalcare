@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Phone, Mail, MapPin } from "lucide-react";
+import { Phone, Mail, MapPin, MessageSquare } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -20,7 +20,7 @@ export default function Footer() {
             />
           </Link>
           <p>
-            Alora Dental Care is dedicated to delivering extraordinary smile transformations using state-of-the-art 3D digital technology, gentle technique, and personalized patient care.
+            Alora Dental Care is a modern, patient-centered dental practice committed to delivering gentle family dentistry, comprehensive oral health, and radiant smile transformations in eMalahleni.
           </p>
         </div>
 
@@ -31,10 +31,10 @@ export default function Footer() {
             <li><Link href="/">Home</Link></li>
             <li><Link href="/about">About Practice</Link></li>
             <li><Link href="/services">Treatments & Services</Link></li>
-            <li><Link href="/transformations">3D Smile Gallery</Link></li>
+            <li><Link href="/transformations">Smile Transformations</Link></li>
             <li><Link href="/process">Patient Journey</Link></li>
             <li><Link href="/reviews">Reviews & Ratings</Link></li>
-            <li><Link href="/booking">Book Consultation</Link></li>
+            <li><Link href="/booking">Book Visit & Contact</Link></li>
           </ul>
         </div>
 
@@ -42,10 +42,10 @@ export default function Footer() {
         <div className="footer-col">
           <h4>Office Hours</h4>
           <ul>
-            <li>Mon - Thu: 8:00 AM - 6:00 PM</li>
+            <li>Mon - Thu: 8:00 AM - 5:00 PM</li>
             <li>Friday: 8:00 AM - 4:00 PM</li>
-            <li>Saturday: 9:00 AM - 2:00 PM</li>
-            <li>Sunday: Closed</li>
+            <li>Saturday: 8:30 AM - 1:00 PM</li>
+            <li>Sunday & Holidays: Closed</li>
           </ul>
         </div>
 
@@ -53,17 +53,31 @@ export default function Footer() {
         <div className="footer-col">
           <h4>Contact Us</h4>
           <ul>
-            <li><Phone size={14} /> +1 (800) 555-ALORA</li>
-            <li><Mail size={14} /> hello@aloradental.com</li>
-            <li><MapPin size={14} /> 742 Evergreen Suite #100</li>
+            <li>
+              <Phone size={14} />
+              <a href="tel:+27136973447">+27 13 697 3447</a>
+            </li>
+            <li>
+              <MessageSquare size={14} />
+              <a href="https://wa.me/27618913052" target="_blank" rel="noopener noreferrer">WhatsApp: 061 891 3052</a>
+            </li>
+            <li>
+              <Mail size={14} />
+              <a href="mailto:info@aloradentalcare.co.za">info@aloradentalcare.co.za</a>
+            </li>
+            <li>
+              <MapPin size={14} />
+              <span>Shop 18, Reyno Ridge Centre, 08 Darius Street, Reyno Ridge, eMalahleni, 1039</span>
+            </li>
           </ul>
         </div>
       </div>
 
       <div className="footer-bottom">
         <div>&copy; {new Date().getFullYear()} Alora Dental Care. All rights reserved.</div>
-        <div>Designed with 3D Precision & Boutique Aesthetics</div>
+        <div>Gentle Dentistry & Dedicated Patient Care in eMalahleni</div>
       </div>
     </footer>
   );
 }
+

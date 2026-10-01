@@ -1,17 +1,14 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import {
   Sparkles,
-  Award,
   CheckCircle2,
   Calendar,
   Clock,
   HeartPulse,
   ShieldCheck,
-  Cpu,
-  Volume2,
-  Tv,
   Coffee,
 } from "lucide-react";
 import ProcessSection from "@/components/ProcessSection";
@@ -28,11 +25,11 @@ export default function ProcessPage() {
             <span>PATIENT EXPERIENCE & TIMELINE</span>
           </div>
           <h1 className="page-title">
-            Your Seamless & Painless <br />
+            Your Gentle & Painless <br />
             <span className="gold-text-accent">4-Step Dental Journey</span>
           </h1>
           <p className="page-subtitle">
-            From your very first 3D optical scan to your final smile unveiling, we have engineered every step of your experience around zero anxiety, transparent communication, and boutique luxury.
+            From your very first visit to your final smile checkup, we have engineered every step of your experience around zero anxiety, clear communication, and personalized care.
           </p>
         </div>
       </section>
@@ -57,72 +54,74 @@ export default function ProcessPage() {
           <div className="process-details-grid">
             <div className="process-detail-card">
               <div className="step-num-badge">01</div>
-              <h3>Complimentary 3D Consultation</h3>
+              <h3>Warm Welcome & Consultation</h3>
               <p>
-                You’ll start in a private consultation suite over espresso or tea. We use intraoral 3D scanners to capture 6,000 optical frames per second — no messy impression goo, zero gagging.
+                You start in a welcoming reception area at Shop 18, Reyno Ridge Centre. Our team listens to your dental history, concerns, and goals in total privacy.
               </p>
-              <div className="detail-pill"><CheckCircle2 size={14} /> Includes 3D Scan & Digital X-Rays</div>
+              <div className="detail-pill"><CheckCircle2 size={14} /> Includes Oral Exam & Digital X-Rays</div>
             </div>
 
             <div className="process-detail-card">
               <div className="step-num-badge">02</div>
-              <h3>3D Digital Smile Simulation</h3>
+              <h3>Transparent Treatment Planning</h3>
               <p>
-                Dr. Vance designs your ideal tooth shape, length, and shade on screen. You’ll preview your new smile in 3D and approve every detail before treatment begins.
+                Dr. Vance reviews your X-rays and options. You will receive a clear, upfront treatment plan with full cost breakdowns and medical aid submission advice.
               </p>
-              <div className="detail-pill"><CheckCircle2 size={14} /> See Your Result Before Starting</div>
+              <div className="detail-pill"><CheckCircle2 size={14} /> Clear Options & Upfront Quotes</div>
             </div>
 
             <div className="process-detail-card">
               <div className="step-num-badge">03</div>
-              <h3>Painless & Gentle Treatment</h3>
+              <h3>Gentle & Painless Treatment</h3>
               <p>
-                Relax in noise-canceling Bose headphones with Netflix on ceiling displays. Choose your preferred sedation option for a completely relaxing experience.
+                Relax in our comfortable treatment chairs. We utilize soft-touch techniques and gentle local anesthesia to keep you completely pain-free.
               </p>
-              <div className="detail-pill"><CheckCircle2 size={14} /> Soft-Touch Local Anesthesia</div>
+              <div className="detail-pill"><CheckCircle2 size={14} /> Gentle Soft-Touch Technique</div>
             </div>
 
             <div className="process-detail-card">
               <div className="step-num-badge">04</div>
-              <h3>Unveiling & Warranty Seal</h3>
+              <h3>Long-Term Care & Follow-Up</h3>
               <p>
-                Your final restorations are bonded with Swiss ceramic cements. Receive your custom maintenance kit and signature 10-year porcelain warranty guarantee.
+                Receive detailed aftercare instructions and protective advice. We schedule routine checkups to maintain your oral health for years to come.
               </p>
-              <div className="detail-pill"><CheckCircle2 size={14} /> 10-Year Porcelain Warranty Included</div>
+              <div className="detail-pill"><CheckCircle2 size={14} /> Comprehensive Preventive Support</div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Sedation & Anxiety Care Section */}
-      <section className="section-padding sedation-options-section">
+      {/* Practice Comfort & Atmosphere Banner */}
+      <section className="section-padding practice-comfort-section">
         <div className="section-container">
-          <div className="section-header">
-            <div className="section-subtitle-badge">
-              <HeartPulse size={14} />
-              <span>ZERO-ANXIETY GUARANTEE</span>
+          <div className="about-grid" style={{ alignItems: "center" }}>
+            <div className="about-image-wrapper">
+              <Image
+                src="/hero-gallery-3.jpg"
+                alt="Alora Dental Care Practice Atmosphere"
+                width={700}
+                height={480}
+                style={{ borderRadius: "16px", objectFit: "cover" }}
+              />
             </div>
-            <h2 className="section-title">
-              Sedation Dentistry Options for <br />
-              <span className="gold-text-accent">Complete Relaxation</span>
-            </h2>
-            <p className="section-description">
-              If dental anxiety has kept you from receiving care, our specialized sedation protocols ensure total calm throughout your appointment.
-            </p>
-          </div>
-
-          <div className="sedation-cards-grid">
-            <div className="sedation-card">
-              <h4>Nitrous Oxide (Laughing Gas)</h4>
-              <p>Mild, fast-acting relaxation inhaled during treatment. Wears off instantly so you can drive yourself home right after.</p>
-            </div>
-            <div className="sedation-card">
-              <h4>Oral Conscious Sedation</h4>
-              <p>A prescribed relaxation pill taken prior to your appointment. You remain conscious but completely calm and drowsy.</p>
-            </div>
-            <div className="sedation-card">
-              <h4>Twilight IV Sedation</h4>
-              <p>Administered by our board-certified anesthesiologist. You drift into a deep sleep state and wake up with all treatment complete.</p>
+            <div className="about-features-col">
+              <div className="section-subtitle-badge">
+                <HeartPulse size={14} />
+                <span>PATIENT COMFORT</span>
+              </div>
+              <h2 className="section-title" style={{ textAlign: "left" }}>
+                Designed For A <br />
+                <span className="gold-text-accent">Zero-Anxiety Experience</span>
+              </h2>
+              <p className="feature-desc" style={{ fontSize: "1.05rem", lineHeight: "1.7" }}>
+                We understand that visiting the dentist can feel intimidating. That is why Alora Dental Care in eMalahleni is built around a warm, friendly atmosphere, clear explanations at every step, and soft-touch techniques to keep you completely at ease.
+              </p>
+              <div style={{ marginTop: "1.5rem" }}>
+                <Link href="/booking" className="btn-primary-hero">
+                  <Calendar size={18} />
+                  <span>Book Your Visit Today</span>
+                </Link>
+              </div>
             </div>
           </div>
         </div>
@@ -132,13 +131,13 @@ export default function ProcessPage() {
       <section className="section-padding cta-banner-section">
         <div className="section-container cta-banner-card">
           <div className="cta-content">
-            <h2>Experience Anxiety-Free Dentistry</h2>
-            <p>Book your initial consultation and discover how comfortable dental care can truly be.</p>
+            <h2>Experience Gentle Family Dentistry</h2>
+            <p>Book your appointment at Shop 18, Reyno Ridge Centre, eMalahleni today.</p>
           </div>
           <div className="cta-actions">
             <Link href="/booking" className="btn-primary-hero">
               <Calendar size={18} />
-              <span>Book Appointment</span>
+              <span>Book Appointment Online</span>
             </Link>
           </div>
         </div>

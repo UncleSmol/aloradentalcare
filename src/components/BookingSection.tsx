@@ -44,28 +44,28 @@ export default function BookingSection() {
             <div className="booking-perks">
               <div className="perk-item">
                 <CheckCircle2 size={18} className="perk-icon" />
-                <span>Complimentary 3D Intraoral Scan</span>
+                <span>Comprehensive Dental Examination</span>
               </div>
               <div className="perk-item">
                 <CheckCircle2 size={18} className="perk-icon" />
-                <span>Flexible Payment & Financing Options</span>
+                <span>Medical Aid Accepted & Payment Options</span>
               </div>
               <div className="perk-item">
                 <CheckCircle2 size={18} className="perk-icon" />
-                <span>Zero-Pain Guarantee in Executive Suites</span>
+                <span>Gentle, Pain-Free Patient Care</span>
               </div>
             </div>
 
             <div className="clinic-contact-badge">
               <MapPin size={16} />
-              <span>742 Evergreen Suite #100, Aesthetics Plaza</span>
+              <span>Shop 18, Reyno Ridge Centre, 08 Darius Street, Reyno Ridge, eMalahleni, 1039</span>
             </div>
           </div>
 
           <div className="booking-form-col">
             {!isSubmitted ? (
               <form onSubmit={handleSubmit} className="booking-form">
-                <h3 className="form-heading">Schedule Consultation</h3>
+                <h3 className="form-heading">Schedule Visit</h3>
 
                 <div className="form-group">
                   <label><User size={14} /> Full Name</label>
@@ -84,7 +84,7 @@ export default function BookingSection() {
                     <input
                       type="tel"
                       required
-                      placeholder="(555) 000-0000"
+                      placeholder="061 891 3052"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                     />
@@ -107,11 +107,11 @@ export default function BookingSection() {
                     value={formData.service}
                     onChange={(e) => setFormData({ ...formData, service: e.target.value })}
                   >
+                    <option>General Checkup & Cleaning</option>
                     <option>Cosmetic Veneers & Crowns</option>
-                    <option>3D Clear Invisalign Aligners</option>
-                    <option>Guided Dental Implants</option>
-                    <option>Laser Enamel Whitening</option>
-                    <option>Preventive Care & Hygiene</option>
+                    <option>Clear Aligners & Orthodontics</option>
+                    <option>Dental Implants & Restorative</option>
+                    <option>Teeth Whitening</option>
                     <option>Same-Day Emergency Care</option>
                   </select>
                 </div>

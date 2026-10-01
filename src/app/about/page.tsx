@@ -11,10 +11,9 @@ import {
   CheckCircle2,
   Calendar,
   Smile,
-  Cpu,
-  Tv,
-  Coffee,
-  Volume2,
+  Stethoscope,
+  MapPin,
+  Phone,
 } from "lucide-react";
 import AboutSection from "@/components/AboutSection";
 import Footer from "@/components/Footer";
@@ -30,11 +29,11 @@ export default function AboutPage() {
             <span>OUR PRACTICE & PHILOSOPHY</span>
           </div>
           <h1 className="page-title">
-            Where Modern Science Meets <br />
-            <span className="gold-text-accent">Boutique Luxury Dentistry</span>
+            Gentle Family & Cosmetic Dentistry <br />
+            <span className="gold-text-accent">In eMalahleni</span>
           </h1>
           <p className="page-subtitle">
-            Founded by Dr. Alora Vance, DDS, Alora Dental Care was created to redefine dentistry — replacing fear and discomfort with zero-anxiety care, ultra-precise 3D technology, and radiant aesthetic artistry.
+            Alora Dental Care is dedicated to delivering high-quality, compassionate dental care for patients of all ages in Reyno Ridge, eMalahleni.
           </p>
         </div>
       </section>
@@ -42,114 +41,119 @@ export default function AboutPage() {
       {/* Main About Component */}
       <AboutSection />
 
-      {/* Founder Spotlight */}
+      {/* Founder / Clinical Lead Spotlight */}
       <section className="section-padding founder-section">
         <div className="section-container founder-grid">
           <div className="founder-info-card">
             <div className="section-subtitle-badge">
               <Award size={14} />
-              <span>LEAD AESTHETIC SURGEON</span>
+              <span>DEDICATED DENTAL TEAM</span>
             </div>
-            <h2>Meet Dr. Alora Vance, DDS</h2>
+            <h2>Meet Dr. Alora Vance & Team</h2>
             <p className="founder-lead">
-              "My mission is to help every patient feel completely relaxed, deeply cared for, and proud to show off their natural smile."
+              "Our goal is to make every dental visit comfortable, transparent, and completely stress-free for your entire family."
             </p>
             <p>
-              Dr. Vance completed her Doctorate of Dental Surgery with top honors at Northwestern University and underwent advanced post-graduate fellowship training in Digital Prosthodontics and Cosmetic Dentistry in Zurich, Switzerland.
+              Dr. Alora Vance and the clinical team at Alora Dental Care bring years of general, cosmetic, and restorative dental expertise. We take the time to understand your unique oral health needs and guide you through every treatment with care.
             </p>
             <div className="credentials-list">
-              <div className="cred-pill"><CheckCircle2 size={16} /> Fellow, American Academy of Cosmetic Dentistry (AACD)</div>
-              <div className="cred-pill"><CheckCircle2 size={16} /> Certified Master in 3D Digital CAD/CAM Design</div>
-              <div className="cred-pill"><CheckCircle2 size={16} /> 15+ Years Specializing in Zero-Anxiety Care</div>
+              <div className="cred-pill"><CheckCircle2 size={16} /> Registered Dental Practitioner with HPCSA</div>
+              <div className="cred-pill"><CheckCircle2 size={16} /> Specialized in Gentle & Family Dentistry</div>
+              <div className="cred-pill"><CheckCircle2 size={16} /> Direct Submissions to South African Medical Aids</div>
             </div>
           </div>
 
-          <div className="founder-visual-card">
-            <div className="doctor-avatar-large">DR</div>
-            <div className="founder-badge-floating">
-              <Award size={18} />
-              <span>TOP AESTHETIC DENTIST 2025</span>
-            </div>
+          <div className="founder-visual-card" style={{ position: "relative", minHeight: "350px", borderRadius: "16px", overflow: "hidden" }}>
+            <Image
+              src="/about-us-hero.png"
+              alt="Dr. Alora Vance Dental Practice"
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
+              style={{ objectFit: "cover" }}
+            />
           </div>
         </div>
       </section>
 
-      {/* Advanced Technology Stack */}
+      {/* Clinical Care Pillars */}
       <section className="section-padding tech-stack-section">
         <div className="section-container">
           <div className="section-header">
             <div className="section-subtitle-badge">
-              <Cpu size={14} />
-              <span>CLINICAL INNOVATION</span>
+              <Stethoscope size={14} />
+              <span>OUR CARE STANDARDS</span>
             </div>
             <h2 className="section-title">
-              Our State-of-the-Art <br />
-              <span className="gold-text-accent">3D Digital Suite</span>
+              What Sets Alora Dental <br />
+              <span className="gold-text-accent">Care Apart</span>
             </h2>
             <p className="section-description">
-              We invest in cutting-edge technology so your appointments are faster, cleaner, and completely comfortable.
+              We focus on gentle care, modern equipment, and a welcoming environment for every patient.
             </p>
           </div>
 
           <div className="tech-grid">
             <div className="tech-card">
-              <Cpu className="tech-icon" size={32} />
-              <h3>3D Optical Intraoral Scanner</h3>
-              <p>Say goodbye to gooey impression trays. Our 3D scanner captures 6,000 frames per second for instant, painless digital mapping.</p>
+              <Smile className="tech-icon" size={32} />
+              <h3>Gentle Family Dentistry</h3>
+              <p>Comprehensive checkups, gentle ultrasonic cleanings, and preventive treatments tailored for both children and adults.</p>
             </div>
             <div className="tech-card">
               <Clock className="tech-icon" size={32} />
-              <h3>In-House 3D Milling Center</h3>
-              <p>Custom porcelain veneers and ceramic crowns milled in under 90 minutes for single-visit smile perfection.</p>
+              <h3>Prompt & On-Time Appointments</h3>
+              <p>We respect your busy schedule with punctual start times and efficient appointment slots.</p>
             </div>
             <div className="tech-card">
               <Sparkles className="tech-icon" size={32} />
-              <h3>Soft-Tissue Laser Dentistry</h3>
-              <p>Painless gum sculpting and decontamination with zero scalpels, zero stitches, and rapid same-day healing.</p>
+              <h3>Cosmetic Smile Enhancement</h3>
+              <p>Professional teeth whitening, handcrafted veneers, and aesthetic composite bonding to boost your confidence.</p>
             </div>
             <div className="tech-card">
               <ShieldCheck className="tech-icon" size={32} />
-              <h3>Ultra-Low Radiation 3D CBCT</h3>
-              <p>Precision 3D bone and anatomical imaging using up to 90% less radiation than conventional dental X-rays.</p>
+              <h3>Direct Medical Aid Claims</h3>
+              <p>Hassle-free direct electronic billing for Discovery Health, Bonitas, Momentum, Medshield, Bestmed, and more.</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Luxury Comfort & Comfort Menu */}
+      {/* Location & Practice Info Banner */}
       <section className="section-padding comfort-menu-section">
         <div className="section-container">
           <div className="section-header">
             <div className="section-subtitle-badge">
-              <HeartPulse size={14} />
-              <span>ZERO ANXIETY ENVIRONMENT</span>
+              <MapPin size={14} />
+              <span>PRACTICE LOCATION</span>
             </div>
             <h2 className="section-title">
-              Boutique Amenities Designed for <br />
-              <span className="gold-text-accent">Total Peace of Mind</span>
+              Conveniently Located In <br />
+              <span className="gold-text-accent">Reyno Ridge Centre</span>
             </h2>
+            <p className="section-description">
+              Shop 18, Reyno Ridge Centre, 08 Darius Street, Reyno Ridge, eMalahleni, 1039.
+            </p>
           </div>
 
           <div className="amenities-grid">
             <div className="amenity-item">
-              <Volume2 className="amenity-icon" size={24} />
-              <h4>Bose Noise-Canceling Headphones</h4>
-              <p>Listen to your favorite music or podcast during your treatment.</p>
+              <MapPin className="amenity-icon" size={24} />
+              <h4>Easy Access & Parking</h4>
+              <p>Ample free parking right in front of the centre with easy wheelchair accessibility.</p>
             </div>
             <div className="amenity-item">
-              <Tv className="amenity-icon" size={24} />
-              <h4>Overhead Streaming Displays</h4>
-              <p>Watch Netflix or Apple TV with ergonomic ceiling monitors.</p>
+              <Phone className="amenity-icon" size={24} />
+              <h4>Direct Telephone</h4>
+              <p>Call us at +27 13 697 3447 or message on WhatsApp at 061 891 3052.</p>
             </div>
             <div className="amenity-item">
-              <Sparkles className="amenity-icon" size={24} />
-              <h4>Essential Oil Aromatherapy</h4>
-              <p>Calming lavender and eucalyptus scents throughout our clinic lounge.</p>
+              <HeartPulse className="amenity-icon" size={24} />
+              <h4>Calm Atmosphere</h4>
+              <p>A relaxing reception space designed to keep anxiety at bay from the moment you step inside.</p>
             </div>
             <div className="amenity-item">
-              <Coffee className="amenity-icon" size={24} />
-              <h4>Refreshed Beverage Bar</h4>
-              <p>Enjoy sparkling waters, organic herbal teas, and espresso.</p>
+              <Calendar className="amenity-icon" size={24} />
+              <h4>Flexible Hours</h4>
+              <p>Open Monday through Thursday 08:00 to 17:00, Friday 08:00 to 16:00, and Saturday mornings.</p>
             </div>
           </div>
         </div>
@@ -159,13 +163,13 @@ export default function AboutPage() {
       <section className="section-padding cta-banner-section">
         <div className="section-container cta-banner-card">
           <div className="cta-content">
-            <h2>Experience Dentistry Reimagined</h2>
-            <p>Book your initial consultation with Dr. Alora Vance and discover the difference of boutique care.</p>
+            <h2>Book Your Dental Visit Today</h2>
+            <p>Schedule your appointment at Alora Dental Care in eMalahleni and experience dedicated patient care.</p>
           </div>
           <div className="cta-actions">
             <Link href="/booking" className="btn-primary-hero">
               <Calendar size={18} />
-              <span>Book Appointment</span>
+              <span>Book Appointment Online</span>
             </Link>
           </div>
         </div>

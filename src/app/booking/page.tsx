@@ -11,9 +11,11 @@ import {
   CheckCircle2,
   ShieldCheck,
   User,
-  HeartPulse,
+  MessageSquare,
+  CreditCard,
+  Building,
 } from "lucide-react";
-import BookingSection from "@/components/BookingSection";
+import PracticeMap from "@/components/PracticeMap";
 import Footer from "@/components/Footer";
 
 export default function BookingPage() {
@@ -22,10 +24,9 @@ export default function BookingPage() {
     name: "",
     email: "",
     phone: "",
-    service: "Porcelain Veneers & Smile Design",
+    service: "General Checkup & Clean",
     date: "",
     time: "10:00 AM",
-    sedation: "Comfort Amenities Only",
     notes: "",
   });
 
@@ -41,19 +42,19 @@ export default function BookingPage() {
         <div className="section-container">
           <div className="section-subtitle-badge">
             <Calendar size={14} />
-            <span>ONLINE APPOINTMENT PORTAL</span>
+            <span>APPOINTMENT & CONTACT PORTAL</span>
           </div>
           <h1 className="page-title">
-            Reserve Your 3D Digital <br />
-            <span className="gold-text-accent">Smile Consultation</span>
+            Book Your Visit at <br />
+            <span className="gold-text-accent">Alora Dental Care</span>
           </h1>
           <p className="page-subtitle">
-            Select your preferred treatment, date, and comfort preferences below. Our patient care team will confirm your reservation within 2 business hours.
+            Situated conveniently in Reyno Ridge Centre, eMalahleni. Reserve your dental appointment online, message us on WhatsApp, or give our reception team a call.
           </p>
         </div>
       </section>
 
-      {/* Main Interactive Booking Portal */}
+      {/* Main Interactive Booking & Contact Portal */}
       <section className="section-padding booking-main-section">
         <div className="section-container booking-portal-grid">
           {/* Booking Form Card */}
@@ -61,13 +62,13 @@ export default function BookingPage() {
             {submitted ? (
               <div className="booking-success-box">
                 <CheckCircle2 size={48} className="check-gold" />
-                <h2>Appointment Request Confirmed!</h2>
+                <h2>Appointment Request Received!</h2>
                 <p>
-                  Thank you, <strong>{formData.name}</strong>. We have received your consultation request for <strong>{formData.service}</strong> on <strong>{formData.date || "your selected date"}</strong> at <strong>{formData.time}</strong>.
+                  Thank you, <strong>{formData.name}</strong>. We have received your visit request for <strong>{formData.service}</strong> on <strong>{formData.date || "your selected date"}</strong> at <strong>{formData.time}</strong>.
                 </p>
                 <div className="success-details">
                   <div className="detail-row"><Clock size={16} /> <span>Confirmation sent to {formData.email}</span></div>
-                  <div className="detail-row"><Phone size={16} /> <span>Our team will call you at {formData.phone} if any adjustments are needed.</span></div>
+                  <div className="detail-row"><Phone size={16} /> <span>Our team will contact you at {formData.phone} shortly.</span></div>
                 </div>
                 <button
                   className="btn-primary-hero"
@@ -84,19 +85,19 @@ export default function BookingPage() {
 
                 <div className="form-grid-2">
                   <div className="form-group">
-                    <label>Treatment / Service</label>
+                    <label>Treatment / Service Required</label>
                     <select
                       value={formData.service}
                       onChange={(e) => setFormData({ ...formData, service: e.target.value })}
                     >
-                      <option>Porcelain Veneers & Smile Design</option>
-                      <option>3D Invisalign & Aligners</option>
-                      <option>Laser Teeth Whitening</option>
-                      <option>Same-Day Porcelain Crown</option>
-                      <option>Dental Implants</option>
-                      <option>Zero-Anxiety Sedation Visit</option>
-                      <option>General Checkup & Hygiene Spa</option>
-                      <option>Emergency Care</option>
+                      <option>General Checkup & Clean</option>
+                      <option>Teeth Whitening & Aesthetics</option>
+                      <option>Porcelain Veneers & Crowns</option>
+                      <option>Clear Aligners & Orthodontics</option>
+                      <option>Dental Implants & Restorative</option>
+                      <option>Root Canal & Pain Relief</option>
+                      <option>Pediatric / Family Dentistry</option>
+                      <option>Emergency Dental Care</option>
                     </select>
                   </div>
 
@@ -128,21 +129,18 @@ export default function BookingPage() {
                   </div>
 
                   <div className="form-group">
-                    <label>Comfort & Sedation Preference</label>
-                    <select
-                      value={formData.sedation}
-                      onChange={(e) => setFormData({ ...formData, sedation: e.target.value })}
-                    >
-                      <option>Comfort Amenities Only (Headphones, Netflix)</option>
-                      <option>Nitrous Oxide (Laughing Gas)</option>
-                      <option>Oral Conscious Sedation Pill</option>
-                      <option>Twilight IV Sleep Dentistry</option>
+                    <label>Patient Category</label>
+                    <select>
+                      <option>New Patient</option>
+                      <option>Existing Patient</option>
+                      <option>Medical Aid Patient</option>
+                      <option>Private Cash / Card</option>
                     </select>
                   </div>
                 </div>
 
                 <h3 className="form-title" style={{ marginTop: "1.5rem" }}>
-                  <User size={18} className="star-gold" /> 2. Patient Contact Details
+                  <User size={18} className="star-gold" /> 2. Patient Details
                 </h3>
 
                 <div className="form-grid-2">
@@ -150,7 +148,7 @@ export default function BookingPage() {
                     <label>Full Name</label>
                     <input
                       type="text"
-                      placeholder="e.g. Sarah Jenkins"
+                      placeholder="e.g. Sipho Ndlovu"
                       required
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
@@ -158,10 +156,10 @@ export default function BookingPage() {
                   </div>
 
                   <div className="form-group">
-                    <label>Phone Number</label>
+                    <label>Phone / WhatsApp Number</label>
                     <input
                       type="tel"
-                      placeholder="(555) 000-0000"
+                      placeholder="061 891 3052"
                       required
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
@@ -173,7 +171,7 @@ export default function BookingPage() {
                   <label>Email Address</label>
                   <input
                     type="email"
-                    placeholder="sarah@example.com"
+                    placeholder="sipho@example.co.za"
                     required
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
@@ -181,10 +179,10 @@ export default function BookingPage() {
                 </div>
 
                 <div className="form-group">
-                  <label>Notes / Goals for Your Smile (Optional)</label>
+                  <label>Additional Notes / Specific Dental Concerns (Optional)</label>
                   <textarea
                     rows={3}
-                    placeholder="Tell us about any specific teeth concerns, questions, or anxiety preferences..."
+                    placeholder="Describe any tooth pain, cosmetic goals, or questions you have for our dental team..."
                     value={formData.notes}
                     onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
                   />
@@ -192,56 +190,95 @@ export default function BookingPage() {
 
                 <button type="submit" className="btn-primary-hero btn-full-width">
                   <Calendar size={18} />
-                  <span>Confirm Appointment Reservation</span>
+                  <span>Submit Appointment Reservation</span>
                 </button>
               </form>
             )}
           </div>
 
-          {/* Contact & Practice Info Sidebar */}
+          {/* Contact & Location Info Sidebar */}
           <div className="booking-info-sidebar">
             <div className="info-card-box">
-              <h3>Practice Hours & Location</h3>
+              <h3>Practice Information & Contact</h3>
+              
               <div className="info-item">
-                <MapPin size={20} className="icon-gold" />
+                <Building size={20} className="icon-gold" />
                 <div>
-                  <h4>Alora Dental Care</h4>
-                  <p>742 Evergreen Suite #100, Luxury Medical District</p>
+                  <h4>Practice Location</h4>
+                  <p>Shop 18, Reyno Ridge Centre</p>
+                  <p>08 Darius Street, Reyno Ridge</p>
+                  <p>eMalahleni, 1039</p>
                 </div>
               </div>
 
               <div className="info-item">
                 <Clock size={20} className="icon-gold" />
                 <div>
-                  <h4>Office Hours</h4>
-                  <p>Mon - Thu: 8:00 AM - 6:00 PM</p>
-                  <p>Fri: 8:00 AM - 4:00 PM</p>
-                  <p>Sat: 9:00 AM - 2:00 PM</p>
+                  <h4>Operating Hours</h4>
+                  <p>Mon - Thu: 08:00 AM - 17:00 PM</p>
+                  <p>Friday: 08:00 AM - 16:00 PM</p>
+                  <p>Saturday: 08:30 AM - 13:00 PM</p>
+                  <p>Sunday & Public Holidays: Closed</p>
                 </div>
               </div>
 
               <div className="info-item">
                 <Phone size={20} className="icon-gold" />
                 <div>
-                  <h4>Direct Line</h4>
-                  <p><a href="tel:18005552567">+1 (800) 555-ALORA</a></p>
+                  <h4>Telephone (Landline)</h4>
+                  <p><a href="tel:+27136973447">+27 13 697 3447</a></p>
+                </div>
+              </div>
+
+              <div className="info-item">
+                <MessageSquare size={20} className="icon-gold" />
+                <div>
+                  <h4>Cell & WhatsApp</h4>
+                  <p>
+                    <a href="https://wa.me/27618913052" target="_blank" rel="noopener noreferrer">
+                      061 891 3052 (Click to Chat)
+                    </a>
+                  </p>
                 </div>
               </div>
 
               <div className="info-item">
                 <Mail size={20} className="icon-gold" />
                 <div>
-                  <h4>Email Concierge</h4>
-                  <p><a href="mailto:hello@aloradental.com">hello@aloradental.com</a></p>
+                  <h4>Email Enquiries</h4>
+                  <p><a href="mailto:info@aloradentalcare.co.za">info@aloradentalcare.co.za</a></p>
                 </div>
               </div>
             </div>
 
             <div className="info-card-box guarantee-box">
-              <ShieldCheck size={28} className="icon-gold" />
-              <h4>Zero-Wait Guarantee</h4>
-              <p>We respect your time. Every appointment is scheduled with generous buffer time so you are seen promptly on arrival.</p>
+              <CreditCard size={24} className="icon-gold" />
+              <h4>Medical Aid & Payment Methods</h4>
+              <p>We submit directly to most major South African medical aids (Discovery Health, Bonitas, Momentum, Medshield, Bestmed, and more). Debit, credit cards, and cash payments accepted.</p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Interactive Practice Location Map Section */}
+      <section className="section-padding map-section-container">
+        <div className="section-container">
+          <div className="section-header">
+            <div className="section-subtitle-badge">
+              <MapPin size={14} />
+              <span>FIND US IN REYNO RIDGE</span>
+            </div>
+            <h2 className="section-title">
+              Visit Our Practice in <br />
+              <span className="gold-text-accent">eMalahleni</span>
+            </h2>
+            <p className="section-description">
+              Conveniently located at Shop 18, Reyno Ridge Centre, 08 Darius Street, Reyno Ridge, eMalahleni. Ample free parking and easy wheelchair access available.
+            </p>
+          </div>
+
+          <div className="map-wrapper" style={{ marginTop: "2rem" }}>
+            <PracticeMap />
           </div>
         </div>
       </section>

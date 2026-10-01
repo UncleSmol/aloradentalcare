@@ -1,6 +1,6 @@
 "use client";
 
-import { Sparkles, Smile, ShieldCheck, Cpu, Stethoscope, Zap } from "lucide-react";
+import { Sparkles, Smile, ShieldCheck, Stethoscope, Zap, HeartPulse } from "lucide-react";
 
 interface ServicesSectionProps {
   onSelectService?: (serviceName: string) => void;
@@ -12,48 +12,48 @@ const servicesData = [
     icon: Sparkles,
     title: "Cosmetic Veneers & Crowns",
     subtitle: "Custom Handcrafted Porcelain",
-    description: "Transform chipped, discolored, or uneven teeth with ultra-thin porcelain veneers designed for natural brilliance.",
+    description: "Transform chipped, discolored, or uneven teeth with high-quality porcelain veneers and ceramic crowns designed for natural brilliance.",
     tag: "Aesthetics",
   },
   {
     id: "02",
     icon: Smile,
-    title: "3D Clear Invisalign Aligners",
-    subtitle: "Discreet Arch Alignment",
-    description: "Straighten your teeth comfortably with custom 3D printed invisible aligners without traditional brackets or wires.",
+    title: "Clear Aligners & Orthodontics",
+    subtitle: "Discreet Tooth Alignment",
+    description: "Straighten your teeth comfortably with custom clear aligners without traditional metal brackets or wires.",
     tag: "Orthodontics",
   },
   {
     id: "03",
     icon: ShieldCheck,
-    title: "Guided Dental Implants",
+    title: "Dental Implants & Restorative",
     subtitle: "Permanent Tooth Replacement",
-    description: "Precision 3D CBCT guided implant placement for lifelike feel, seamless bite strength, and rapid healing time.",
+    description: "Precision-guided implant placement and restorative bridges for natural feel, seamless bite strength, and durable results.",
     tag: "Restorative",
   },
   {
     id: "04",
     icon: Zap,
-    title: "Laser Enamel Whitening",
-    subtitle: "Instant 8-Shade Brightening",
-    description: "Advanced cold-laser whitening safely eliminates deep food and beverage stains in 45 minutes with zero sensitivity.",
+    title: "Professional Teeth Whitening",
+    subtitle: "Brighten Your Natural Smile",
+    description: "Safe, effective clinical teeth whitening eliminates deep food, beverage, and aging stains to restore your radiant smile.",
     tag: "Popular",
   },
   {
     id: "05",
     icon: Stethoscope,
     title: "Preventive Care & Hygiene",
-    subtitle: "Comprehensive Oral Health",
-    description: "Gentle ultrasonic cleaning, detailed gum health assessment, and protective enamel treatments for long-term health.",
+    subtitle: "Comprehensive Family Dentistry",
+    description: "Gentle ultrasonic cleanings, detailed gum health assessments, and protective fluoride enamel treatments for long-term health.",
     tag: "Wellness",
   },
   {
     id: "06",
-    icon: Cpu,
+    icon: HeartPulse,
     title: "Same-Day Emergency Care",
     subtitle: "Immediate Pain Relief",
-    description: "Urgent dental appointments for toothaches, chipped teeth, or lost restorations with prompt relief guarantees.",
-    tag: "24/7 Support",
+    description: "Urgent dental appointments for toothaches, chipped teeth, cracked fillings, or lost restorations with prompt relief guarantees.",
+    tag: "Emergency",
   },
 ];
 
@@ -68,10 +68,10 @@ export default function ServicesSection({ onSelectService }: ServicesSectionProp
           </div>
           <h2 className="section-title">
             Tailored Dental Care <br />
-            <span className="gold-text-accent">For Every Stage of Life</span>
+            <span className="gold-text-accent">For The Whole Family</span>
           </h2>
           <p className="section-description">
-            From routine preventive checkups to complex full-mouth cosmetic transformations, Alora Dental Care delivers exceptional treatment with unmatched gentle touch.
+            From routine preventive checkups to restorative crowns and cosmetic teeth whitening, Alora Dental Care in eMalahleni delivers gentle, high-quality treatment.
           </p>
         </div>
 

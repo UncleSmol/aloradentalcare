@@ -1,35 +1,35 @@
 "use client";
 
-import { Sparkles, Scan, Smile, ShieldCheck, HeartPulse } from "lucide-react";
+import { Sparkles, Stethoscope, Smile, ShieldCheck, HeartPulse } from "lucide-react";
 
 const processSteps = [
   {
     step: "01",
-    icon: Scan,
-    title: "Digital Consultation & 3D Scan",
-    subtitle: "Mess-Free Optical Imaging",
-    description: "We capture high-resolution 3D optical scans of your teeth in under 5 minutes without uncomfortable tray impressions.",
+    icon: Stethoscope,
+    title: "Comprehensive Dental Exam",
+    subtitle: "Gentle Diagnostics & X-Rays",
+    description: "We conduct a thorough examination of your teeth, gums, and oral health using low-radiation digital imaging.",
   },
   {
     step: "02",
     icon: Smile,
-    title: "Custom 3D Smile Preview",
-    subtitle: "Try On Your New Smile",
-    description: "Our digital smile design software creates a photorealistic 3D preview of your proposed results before treatment begins.",
+    title: "Personalized Treatment Plan",
+    subtitle: "Clear Guidance & Options",
+    description: "Dr. Vance discusses your dental goals, answers questions, and provides a transparent treatment plan tailored to your budget.",
   },
   {
     step: "03",
     icon: HeartPulse,
-    title: "Gentle Micro-Procedure",
-    subtitle: "Zero Stress & Pain Guarantee",
-    description: "Relax in our comfortable treatment suite while our specialists carry out your gentle, micro-invasive procedure.",
+    title: "Gentle & Comfortable Treatment",
+    subtitle: "Relaxed Clinical Environment",
+    description: "Experience soft-touch procedures in our soothing practice suite designed to keep you relaxed and completely pain-free.",
   },
   {
     step: "04",
     icon: ShieldCheck,
-    title: "Radiant Lifetime Smile",
-    subtitle: "Ongoing Care & Assurance",
-    description: "Walk out with your brand new, confident smile backed by our clinic guarantee and comprehensive follow-up care.",
+    title: "Radiant Smile & Aftercare",
+    subtitle: "Long-Term Oral Health",
+    description: "Walk out with a healthy, confident smile backed by personalized hygiene advice and ongoing preventive support.",
   },
 ];
 
@@ -44,10 +44,10 @@ export default function ProcessSection() {
           </div>
           <h2 className="section-title">
             Your Seamless Journey To A <br />
-            <span className="gold-text-accent">Perfect, Healthy Smile</span>
+            <span className="gold-text-accent">Healthy, Radiant Smile</span>
           </h2>
           <p className="section-description">
-            We've streamlined every step of your dental visit to ensure maximum comfort, complete clarity, and flawless results.
+            We've streamlined every step of your dental visit at Alora Dental Care in eMalahleni to ensure maximum comfort, complete clarity, and lasting results.
           </p>
         </div>
 

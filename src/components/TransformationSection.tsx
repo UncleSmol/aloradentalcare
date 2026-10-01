@@ -29,11 +29,11 @@ export default function TransformationSection() {
             <span>REAL PATIENT RESULTS</span>
           </div>
           <h2 className="section-title">
-            Witness the Power of <br />
-            <span className="gold-text-accent">3D Smile Transformation</span>
+            Witness the Power of a <br />
+            <span className="gold-text-accent">Radiant Smile Transformation</span>
           </h2>
           <p className="section-description">
-            Drag the interactive slider below to explore the dramatic difference handcrafted porcelain veneers and 3D alignment can make.
+            Drag the interactive slider below to explore the dramatic difference custom porcelain veneers and clear orthodontic alignment can make.
           </p>
         </div>
 

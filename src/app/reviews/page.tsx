@@ -5,7 +5,6 @@ import Link from "next/link";
 import {
   Star,
   Sparkles,
-  Award,
   CheckCircle2,
   Calendar,
   Quote,
@@ -20,55 +19,55 @@ const ALL_REVIEWS = [
     id: 1,
     author: "Jessica K.",
     rating: 5,
-    treatment: "Porcelain Veneers (Full Arch)",
+    treatment: "Porcelain Veneers",
     date: "Verified Patient — 2 Weeks Ago",
     review:
-      "Dr. Vance and her entire staff treated me like royalty. The 3D scan was completely effortless, and my porcelain veneers look so natural that even my closest friends just thought I had a teeth whitening! Cannot recommend Alora Dental enough.",
+      "Dr. Vance and her entire staff treated me like royalty. The consultation was thorough and effortless, and my porcelain veneers look so natural that even my closest friends just thought I had a teeth whitening! Cannot recommend Alora Dental enough.",
   },
   {
     id: 2,
     author: "David R.",
     rating: 5,
-    treatment: "3D Invisalign & Whitening",
+    treatment: "Clear Aligners & Whitening",
     date: "Verified Patient — 1 Month Ago",
     review:
-      "As someone who had intense dental phobia for years, finding Alora Dental Care was life-changing. They used Bose noise-canceling headphones, warm blankets, and soft sedation. I felt zero pain throughout my aligner treatment.",
+      "As someone who had intense dental anxiety for years, finding Alora Dental Care in Reyno Ridge Centre was life-changing. They used soft techniques and gentle care. I felt zero pain throughout my aligner treatment.",
   },
   {
     id: 3,
     author: "Amanda B.",
     rating: 5,
-    treatment: "Same-Day Ceramic Crown",
+    treatment: "Porcelain Crown",
     date: "Verified Patient — 1 Month Ago",
     review:
-      "Broke a front tooth on a Thursday morning and walked out with a permanent porcelain crown by 1:00 PM the same day! The 3D milling machine right in the clinic is mind-blowing.",
+      "Broke a front tooth on a Thursday morning and walked out with a permanent porcelain crown! The practice is so clean, modern, and welcoming.",
   },
   {
     id: 4,
     author: "Robert H.",
     rating: 5,
-    treatment: "Dental Implant & Crown",
+    treatment: "Dental Implant & Restorative Care",
     date: "Verified Patient — 2 Months Ago",
     review:
-      "The implant procedure was incredibly smooth. 3D guided surgery meant zero downtime and very little swelling. Dr. Vance is truly a master surgeon.",
+      "The implant procedure was incredibly smooth. Precision guidance meant zero downtime and very little swelling. Dr. Vance is truly a wonderful dentist.",
   },
   {
     id: 5,
     author: "Samantha P.",
     rating: 5,
-    treatment: "Cosmetic Laser Whitening",
+    treatment: "Teeth Whitening",
     date: "Verified Patient — 3 Months Ago",
     review:
-      "My teeth went 7 shades whiter in a single hour without any zingers or tooth sensitivity. The clinic smells like a luxury spa and the team is so warm.",
+      "My teeth went shades whiter in a single visit without any sensitivity. The clinic is so pleasant and the team in eMalahleni is wonderful.",
   },
   {
     id: 6,
     author: "Michael C.",
     rating: 5,
-    treatment: "Complete Smile Makeover",
+    treatment: "General & Family Dentistry",
     date: "Verified Patient — 3 Months Ago",
     review:
-      "Best dental experience of my life. From the espresso bar in the waiting room to the precision 3D digital design, everything is top tier.",
+      "Best dental experience for my entire family. From the warm waiting room to the gentle checkup, everything is top tier.",
   },
 ];
 
@@ -95,11 +94,11 @@ export default function ReviewsPage() {
             <span>PATIENT TESTIMONIALS</span>
           </div>
           <h1 className="page-title">
-            Loved By Over 10,000 <br />
-            <span className="gold-text-accent">Happy Patients</span>
+            Loved By Families Across <br />
+            <span className="gold-text-accent">eMalahleni</span>
           </h1>
           <p className="page-subtitle">
-            Read verified reviews from patients who experienced our zero-anxiety care, 3D smile design, and boutique hospitality.
+            Read verified reviews from patients who experienced our gentle care, warm atmosphere, and dedicated dentistry at Shop 18, Reyno Ridge Centre.
           </p>
         </div>
       </section>
@@ -114,17 +113,7 @@ export default function ReviewsPage() {
                 <Star key={s} size={18} className="star-gold" />
               ))}
             </div>
-            <p>Google Verified Reviews (850+ Ratings)</p>
-          </div>
-
-          <div className="rating-badge-card">
-            <h3>4.9 / 5.0</h3>
-            <div className="stars-row">
-              {[1, 2, 3, 4, 5].map((s) => (
-                <Star key={s} size={18} className="star-gold" />
-              ))}
-            </div>
-            <p>Trustpilot Excellence Score</p>
+            <p>Google Patient Ratings</p>
           </div>
 
           <div className="rating-badge-card">
@@ -134,7 +123,17 @@ export default function ReviewsPage() {
                 <Star key={s} size={18} className="star-gold" />
               ))}
             </div>
-            <p>Healthgrades Top Doctor Award</p>
+            <p>Verified Patient Feedback</p>
+          </div>
+
+          <div className="rating-badge-card">
+            <h3>100% Gentle</h3>
+            <div className="stars-row">
+              {[1, 2, 3, 4, 5].map((s) => (
+                <Star key={s} size={18} className="star-gold" />
+              ))}
+            </div>
+            <p>Family Care Guarantee</p>
           </div>
         </div>
       </section>
@@ -152,7 +151,7 @@ export default function ReviewsPage() {
             </div>
             <h2 className="section-title">
               What Our Patients Say <br />
-              <span className="gold-text-accent">About Their Experience</span>
+              <span className="gold-text-accent">About Their Visit</span>
             </h2>
           </div>
 
@@ -190,7 +189,7 @@ export default function ReviewsPage() {
               <span>SHARE YOUR STORY</span>
             </div>
             <h2>Have You Visited Alora Dental Care?</h2>
-            <p>We value your feedback and love hearing how your new smile has impacted your confidence.</p>
+            <p>We value your feedback and love hearing how your visit has improved your smile and health.</p>
           </div>
 
           {reviewSubmitted ? (
@@ -234,13 +233,13 @@ export default function ReviewsPage() {
       <section className="section-padding cta-banner-section">
         <div className="section-container cta-banner-card">
           <div className="cta-content">
-            <h2>Join Our Family of 10,000+ Happy Smiles</h2>
-            <p>Book your appointment today and experience why our patients love visiting Alora Dental Care.</p>
+            <h2>Join Our Happy Patients at Alora Dental Care</h2>
+            <p>Book your appointment today at Shop 18, Reyno Ridge Centre, eMalahleni.</p>
           </div>
           <div className="cta-actions">
             <Link href="/booking" className="btn-primary-hero">
               <Calendar size={18} />
-              <span>Book Appointment</span>
+              <span>Book Visit Online</span>
             </Link>
           </div>
         </div>

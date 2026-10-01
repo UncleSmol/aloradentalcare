@@ -4,21 +4,21 @@ import { Sparkles, Star } from "lucide-react";
 
 const testimonials = [
   {
-    quote: "Dr. Alora Vance and her team completely changed how I feel about going to the dentist. My 3D veneers look so natural, and the process was completely painless!",
+    quote: "Dr. Vance and her team completely changed how I feel about going to the dentist. My porcelain veneers look so natural, and the entire process was completely painless!",
     name: "Sophia Martinez",
     treatment: "Cosmetic Veneers Patient",
     initials: "SM",
   },
   {
-    quote: "I was super nervous about getting dental implants after an old injury. The 3D scan procedure was seamless, and I healed in just a couple of days. 10/10 recommendation!",
+    quote: "I was super nervous about getting a dental implant after breaking a tooth. The consultation was thorough, the procedure was smooth, and I healed quickly. 10/10 recommendation!",
     name: "Marcus Sterling",
-    treatment: "3D Implant Patient",
+    treatment: "Dental Implant Patient",
     initials: "MS",
   },
   {
-    quote: "The Invisalign treatment plan was executed perfectly. Being able to see my 3D smile design before starting gave me so much confidence.",
+    quote: "The clear aligner treatment plan was executed perfectly. Being able to get gentle, professional care in Reyno Ridge Centre gave me so much confidence.",
     name: "Elena Rostova",
-    treatment: "Invisalign Patient",
+    treatment: "Clear Aligner Patient",
     initials: "ER",
   },
 ];
@@ -33,8 +33,8 @@ export default function TestimonialsSection() {
             <span>PATIENT STORIES</span>
           </div>
           <h2 className="section-title">
-            Loved By Thousands Of <br />
-            <span className="gold-text-accent">Happy Patients</span>
+            Loved By Families Across <br />
+            <span className="gold-text-accent">eMalahleni</span>
           </h2>
           <p className="section-description">
             Read real feedback from patients who entrusted their smiles to Alora Dental Care.

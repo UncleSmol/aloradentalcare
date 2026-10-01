@@ -52,9 +52,9 @@ export default function Navbar() {
 
         {/* Action CTAs */}
         <div className="navbar-actions">
-          <a href="tel:18005552567" className="nav-phone">
+          <a href="tel:+27136973447" className="nav-phone">
             <Phone size={14} />
-            <span>+1 (800) 555-ALORA</span>
+            <span>+27 13 697 3447</span>
           </a>
           <Link href="/booking" className="btn-book-nav">
             <Calendar size={14} />

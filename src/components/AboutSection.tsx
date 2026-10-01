@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Sparkles, HeartPulse, Award, ShieldCheck, Clock } from "lucide-react";
+import { Sparkles, HeartPulse, ShieldCheck, Smile } from "lucide-react";
 
 export default function AboutSection() {
   return (
@@ -14,19 +14,19 @@ export default function AboutSection() {
           </div>
           <h2 className="section-title">
             Gentle Dentistry Designed Around <br />
-            <span className="gold-text-accent">Your Comfort & Beauty</span>
+            <span className="gold-text-accent">Your Comfort & Oral Health</span>
           </h2>
           <p className="section-description">
-            At Alora Dental Care, we combine boutique luxury with modern clinical science to deliver anxiety-free dental experiences that leave you smiling with confidence.
+            At Alora Dental Care in Reyno Ridge, eMalahleni, we combine compassionate patient care with modern dental techniques to deliver welcoming, anxiety-free dental experiences for the whole family.
           </p>
         </div>
 
         <div className="about-grid">
-          {/* Visual About Us Image (No border, no background) */}
+          {/* Visual About Us Image */}
           <div className="about-image-wrapper">
             <Image
               src="/about-us-hero.png"
-              alt="About Alora Dental Care"
+              alt="About Alora Dental Care Practice"
               width={700}
               height={500}
               priority
@@ -42,21 +42,21 @@ export default function AboutSection() {
                 <HeartPulse size={24} />
               </div>
               <div>
-                <h3 className="feature-title">Painless & Gentle Approach</h3>
+                <h3 className="feature-title">Painless & Gentle Care</h3>
                 <p className="feature-desc">
-                  We specialize in zero-anxiety techniques, sedation options, and soft-laser treatments designed for total peace of mind.
+                  We prioritize your comfort with soft-touch techniques, clear communication, and a soothing clinical setting for total peace of mind.
                 </p>
               </div>
             </div>
 
             <div className="feature-block">
               <div className="feature-icon-wrapper">
-                <Sparkles size={24} />
+                <Smile size={24} />
               </div>
               <div>
-                <h3 className="feature-title">3D Precision Technology</h3>
+                <h3 className="feature-title">Modern Clinical Equipment</h3>
                 <p className="feature-desc">
-                  Intraoral 3D scanners replace messy traditional impressions for instant, ultra-comfortable optical mapping.
+                  Low-radiation digital imaging and gentle ultrasonic tools ensure fast, comfortable diagnostics without traditional discomfort.
                 </p>
               </div>
             </div>
@@ -66,21 +66,21 @@ export default function AboutSection() {
                 <ShieldCheck size={24} />
               </div>
               <div>
-                <h3 className="feature-title">Comprehensive Warranty</h3>
+                <h3 className="feature-title">Comprehensive Family Dentistry</h3>
                 <p className="feature-desc">
-                  All porcelain veneers, ceramic crowns, and implant restorations come with our signature quality assurance guarantee.
+                  From toddlers' first checkups to adult cosmetic enhancements and restorative care, we treat every member of your family like royalty.
                 </p>
               </div>
             </div>
 
             <div className="feature-block">
               <div className="feature-icon-wrapper">
-                <Clock size={24} />
+                <Sparkles size={24} />
               </div>
               <div>
-                <h3 className="feature-title">Same-Day Restorations</h3>
+                <h3 className="feature-title">Convenient eMalahleni Location</h3>
                 <p className="feature-desc">
-                  Our in-house 3D CAD/CAM milling suite enables single-visit veneers, crowns, and smile touch-ups.
+                  Easily accessible at Shop 18, Reyno Ridge Centre with free parking, flexible appointment scheduling, and direct medical aid billing.
                 </p>
               </div>
             </div>

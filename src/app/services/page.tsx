@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import {
   Sparkles,
@@ -10,10 +11,10 @@ import {
   ShieldCheck,
   CheckCircle2,
   Calendar,
-  ArrowRight,
   Smile,
   Layers,
   Award,
+  CreditCard,
 } from "lucide-react";
 import Footer from "@/components/Footer";
 
@@ -22,49 +23,52 @@ const SERVICES_DATA = [
     id: "veneers",
     category: "cosmetic",
     icon: Sparkles,
-    title: "Porcelain Veneers & Digital Smile Design",
-    tagline: "Handcrafted Ceramic Shells for Flawless Symmetry",
+    image: "/hero-gallery-2.jpg",
+    title: "Porcelain Veneers & Cosmetic Dentistry",
+    tagline: "Handcrafted Ceramic Shells for Radiant Symmetry",
     description:
-      "Transform shade, length, shape, and slight misalignments with ultra-thin porcelain veneers. Each veneer is custom-milled to reflect light just like natural enamel.",
+      "Transform discolored, chipped, gapped, or uneven teeth with porcelain veneers. Each veneer is custom-designed to match your facial aesthetics and reflect light just like natural enamel.",
     features: [
-      "100% Custom Shade Matching",
-      "Stain-Resistant Swiss Porcelain",
-      "Micro-Thin Minimal Prep Option",
-      "10-Year Porcelain Warranty",
+      "Custom Shade & Form Matching",
+      "Stain-Resistant High-Grade Porcelain",
+      "Minimal Prep Dental Options",
+      "Natural Enamel Aesthetics",
     ],
-    duration: "2 Visits (or Same-Day CAD)",
+    duration: "2 Visits",
     idealFor: "Chipped, discolored, spaced, or uneven teeth",
   },
   {
-    id: "invisalign",
+    id: "aligners",
     category: "aligners",
     icon: Zap,
-    title: "3D Invisalign & Clear Aligner Therapy",
-    tagline: "Virtually Invisible Teeth Straightening",
+    image: "/hero-gallery-5.jpg",
+    title: "Clear Aligners & Orthodontic Care",
+    tagline: "Discreet & Comfortable Teeth Straightening",
     description:
-      "Straighten your smile discreetly using custom 3D printed clear aligners. Using optical digital tracking, we map your tooth movement with sub-millimeter precision.",
+      "Straighten your teeth comfortably with clear, removable aligners. Enjoy smooth, bracket-free tooth movement tailored to your active lifestyle.",
     features: [
-      "No Messy Impression Trays",
-      "Removable for Meals & Events",
-      "Accelerated 3D Tracking",
-      "Includes Complimentary Whitening",
+      "Nearly Invisible Appearance",
+      "Removable for Meals & Hygiene",
+      "Gentle & Smooth Aligners",
+      "Includes Professional Whitening",
     ],
     duration: "6 - 14 Months Average",
-    idealFor: "Crowding, gaps, overbites, and crossbites",
+    idealFor: "Crowding, gaps, overbites, and alignment",
   },
   {
     id: "whitening",
     category: "cosmetic",
     icon: Smile,
-    title: "Laser Teeth Whitening & Enamel Spa",
-    tagline: "Up to 8 Shades Brighter in 60 Minutes",
+    image: "/hero-gallery-4.jpg",
+    title: "Professional Laser Teeth Whitening",
+    tagline: "Brighten Your Natural Teeth up to 8 Shades",
     description:
-      "Our gentle cold-laser whitening system removes deep intrinsic stains caused by coffee, wine, and aging without chemical tooth sensitivity.",
+      "Our gentle clinical teeth whitening system safely removes deep intrinsic stains caused by coffee, tea, wine, and aging without tooth sensitivity.",
     features: [
-      "Immediate 60-Minute Results",
-      "Zero Tooth Sensitivity Formula",
-      "Enamel Remineralizing Seal",
-      "Includes Custom Take-Home Trays",
+      "Immediate In-Office Results",
+      "Gentle Enamel-Safe Gel Formula",
+      "Enamel Remineralization Care",
+      "Includes Take-Home Touch-Up Kit",
     ],
     duration: "Single 60-Minute Visit",
     idealFor: "Deep stains, yellowing, special event prep",
@@ -73,52 +77,55 @@ const SERVICES_DATA = [
     id: "crowns",
     category: "restorative",
     icon: Clock,
-    title: "Same-Day Porcelain Crowns & Onlays",
-    tagline: "Permanent Ceramic Restorations in 90 Minutes",
+    image: "/hero-gallery-3.jpg",
+    title: "Porcelain Crowns, Bridges & Fillings",
+    tagline: "Durable & Lifelike Tooth Restorations",
     description:
-      "Restore damaged or decayed teeth in a single visit with our in-house 3D CAD/CAM milling system. No temporary crowns or multi-week waits required.",
+      "Restore damaged or decayed teeth with tooth-colored ceramic crowns, custom bridges, and aesthetic composite fillings designed for optimal strength and bite comfort.",
     features: [
-      "100% Metal-Free Ceramic",
-      "3D Digitally Designed Fit",
-      "Done in a Single Visit",
-      "Natural Translucency",
+      "100% Metal-Free Ceramic Materials",
+      "Digitally Mapped Precise Fit",
+      "Strong & Natural Translucency",
+      "Painless Restoration Process",
     ],
-    duration: "90 Minutes Total",
+    duration: "1 - 2 Visits",
     idealFor: "Broken, cracked, or heavily decayed teeth",
   },
   {
     id: "implants",
     category: "restorative",
     icon: ShieldCheck,
-    title: "Premium Dental Implants & Arch Restorations",
-    tagline: "Permanent, Natural-Feeling Tooth Replacement",
+    image: "/hero-bg.jpg",
+    title: "Dental Implants & Tooth Replacements",
+    tagline: "Permanent, Natural-Feeling Implant Solutions",
     description:
-      "Replace missing teeth with biocompatible titanium implants and porcelain crowns that look, feel, and function just like your natural teeth.",
+      "Replace single or multiple missing teeth with biocompatible titanium dental implants topped with natural ceramic crowns that function just like your real teeth.",
     features: [
-      "3D Guided Surgical Precision",
-      "Preserves Facial Structure",
+      "Guided Surgical Placement",
+      "Preserves Natural Bone Structure",
       "Permanent Lifetime Solution",
-      "Natural Bite Strength",
+      "Restores Full Chewing Strength",
     ],
     duration: "Multi-Phase Precision Care",
     idealFor: "Single or multiple missing teeth",
   },
   {
     id: "sedation",
-    category: "sedation",
+    category: "preventive",
     icon: HeartPulse,
-    title: "Zero-Anxiety Sleep Dentistry & Sedation",
-    tagline: "Painless, Fear-Free Dental Experiences",
+    image: "/about-us-hero.png",
+    title: "Gentle Family & Preventive Dentistry",
+    tagline: "Comfortable Care for Adults & Children",
     description:
-      "Overcome dental anxiety completely with customized sedation options ranging from nitrous oxide (laughing gas) to oral and twilight IV sedation.",
+      "Comprehensive dental examinations, gentle ultrasonic plaque removal, fluoride treatments, and zero-anxiety care designed for adults and children.",
     features: [
-      "Board-Certified Sedation Monitoring",
-      "Wake Up with Treatment Complete",
-      "Soft-Touch Anesthesia Technique",
-      "Quiet, Luxury Suites",
+      "Soft-Touch Gentle Hygiene",
+      "Low-Radiation Digital X-Rays",
+      "Pediatric Friendly Dentist",
+      "Quiet & Relaxing Environment",
     ],
-    duration: "Per Treatment Visit",
-    idealFor: "Dental anxiety, sensitive gag reflex, complex procedures",
+    duration: "45 - 60 Minutes",
+    idealFor: "Routine exams, cleanings, and preventive checkups",
   },
 ];
 
@@ -137,14 +144,14 @@ export default function ServicesPage() {
         <div className="section-container">
           <div className="section-subtitle-badge">
             <Layers size={14} />
-            <span>OUR CLINICAL SERVICES</span>
+            <span>OUR DENTAL SERVICES</span>
           </div>
           <h1 className="page-title">
-            Comprehensive Boutique Dentistry <br />
-            <span className="gold-text-accent">Designed For Your Comfort</span>
+            Comprehensive Family & Cosmetic Dentistry <br />
+            <span className="gold-text-accent">In eMalahleni</span>
           </h1>
           <p className="page-subtitle">
-            Explore our signature range of 3D cosmetic, restorative, aligner, and zero-anxiety treatments engineered to deliver long-lasting beauty and health.
+            Explore our complete suite of general, cosmetic, restorative, and orthodontic dental treatments delivered with warmth, precision, and patient-centered care.
           </p>
         </div>
       </section>
@@ -169,7 +176,7 @@ export default function ServicesPage() {
               className={`filter-btn ${activeCategory === "aligners" ? "active" : ""}`}
               onClick={() => setActiveCategory("aligners")}
             >
-              3D Aligners
+              Clear Aligners
             </button>
             <button
               className={`filter-btn ${activeCategory === "restorative" ? "active" : ""}`}
@@ -178,10 +185,10 @@ export default function ServicesPage() {
               Restorative & Crowns
             </button>
             <button
-              className={`filter-btn ${activeCategory === "sedation" ? "active" : ""}`}
-              onClick={() => setActiveCategory("sedation")}
+              className={`filter-btn ${activeCategory === "preventive" ? "active" : ""}`}
+              onClick={() => setActiveCategory("preventive")}
             >
-              Zero-Anxiety Sedation
+              Preventive & Family
             </button>
           </div>
 
@@ -191,9 +198,21 @@ export default function ServicesPage() {
               const IconComp = service.icon;
               return (
                 <div key={service.id} className="service-detail-card">
+                  {/* Visual Image Header */}
+                  <div className="service-card-image-box" style={{ position: "relative", height: "180px", width: "100%", borderRadius: "12px", overflow: "hidden", marginBottom: "1.25rem" }}>
+                    <Image
+                      src={service.image}
+                      alt={service.title}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                      style={{ objectFit: "cover" }}
+                    />
+                    <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, transparent 40%, rgba(11,23,48,0.85) 100%)" }} />
+                  </div>
+
                   <div className="card-header-row">
                     <div className="service-icon-box">
-                      <IconComp size={28} />
+                      <IconComp size={24} />
                     </div>
                     <div className="duration-tag">
                       <Clock size={14} />
@@ -218,8 +237,8 @@ export default function ServicesPage() {
                     ))}
                   </div>
 
-                  <div className="card-action-row">
-                    <Link href={`/booking?service=${service.id}`} className="btn-primary-hero">
+                  <div className="card-action-row" style={{ marginTop: "auto", paddingTop: "1.25rem" }}>
+                    <Link href={`/booking?service=${service.id}`} className="btn-primary-hero" style={{ width: "100%", justifyContent: "center" }}>
                       <Calendar size={16} />
                       <span>Book Treatment</span>
                     </Link>
@@ -236,18 +255,18 @@ export default function ServicesPage() {
         <div className="section-container insurance-card">
           <div className="insurance-info">
             <div className="section-subtitle-badge">
-              <Award size={14} />
-              <span>TRANSPARENT PRICING</span>
+              <CreditCard size={14} />
+              <span>MEDICAL AID & PAYMENTS</span>
             </div>
-            <h2>Flexible Payment & Insurance Options</h2>
+            <h2>Direct Medical Aid Billing & Flexible Options</h2>
             <p>
-              We believe luxury dental care should be accessible and transparent. We accept all major PPO insurance plans, offer 0% APR financing options via CareCredit and Sunbit, and provide our in-house VIP Membership Plan for non-insured patients.
+              At Alora Dental Care in Reyno Ridge, eMalahleni, we submit claims directly to Discovery Health, Bonitas, Momentum, Medshield, Bestmed, Fedhealth, and all major South African medical schemes. We also accept debit cards, credit cards, and EFT payments.
             </p>
           </div>
           <div className="insurance-bullets">
-            <div className="bullet-pill"><CheckCircle2 size={16} /> All Major PPO Insurance Accepted</div>
-            <div className="bullet-pill"><CheckCircle2 size={16} /> 0% APR Flexible Monthly Payment Plans</div>
-            <div className="bullet-pill"><CheckCircle2 size={16} /> Complimentary 3D Smile Consultation</div>
+            <div className="bullet-pill"><CheckCircle2 size={16} /> All Major South African Medical Aids Accepted</div>
+            <div className="bullet-pill"><CheckCircle2 size={16} /> Direct Electronic Claims Submission</div>
+            <div className="bullet-pill"><CheckCircle2 size={16} /> Transparent Quotes & Cash Rates Available</div>
           </div>
         </div>
       </section>
