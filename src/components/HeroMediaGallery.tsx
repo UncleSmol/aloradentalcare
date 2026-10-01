@@ -27,7 +27,7 @@ export default function HeroMediaGallery() {
       {/* Dark Gradient Contrast Overlay */}
       <div className="hero-bg-overlay" />
 
-      {/* Parallax Floating Hand Image Layer (Bottom-Right Overlap) */}
+      {/* Parallax Floating Hand Image Layer (Bottom-Left Overlap) */}
       <motion.div
         className="hero-hand-wrapper"
         style={{ y: handY }}
@@ -35,8 +35,8 @@ export default function HeroMediaGallery() {
         <Image
           src="/hero-bg-hand.png"
           alt="Alora Dental Care Practice Detail"
-          width={700}
-          height={700}
+          width={490}
+          height={490}
           priority
           unoptimized
           className="hero-hand-img"
