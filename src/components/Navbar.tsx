@@ -29,6 +29,7 @@ export default function Navbar() {
             alt="Alora Dental Care Logo"
             width={480}
             height={130}
+            style={{ width: "auto", height: "auto" }}
             className="navbar-logo-img"
             priority
           />

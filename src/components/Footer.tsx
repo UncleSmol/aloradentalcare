@@ -16,6 +16,7 @@ export default function Footer() {
               alt="Alora Dental Care Logo"
               width={480}
               height={130}
+              style={{ width: "auto", height: "auto" }}
               className="footer-logo-img"
             />
           </Link>
